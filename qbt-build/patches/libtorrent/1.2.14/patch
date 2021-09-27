@@ -1,0 +1,31 @@
+diff --git include/libtorrent/config.hpp include/libtorrent/config.hpp
+index bec1b4756..596b91c3d 100644
+--- include/libtorrent/config.hpp
++++ include/libtorrent/config.hpp
+@@ -474,22 +474,22 @@ POSSIBILITY OF SUCH DAMAGE.
+ #if !defined(TORRENT_READ_HANDLER_MAX_SIZE)
+ # if defined _GLIBCXX_DEBUG || !defined NDEBUG
+ // internal
+-constexpr std::size_t TORRENT_READ_HANDLER_MAX_SIZE = 432;
++constexpr std::size_t TORRENT_READ_HANDLER_MAX_SIZE = 448;
+ # else
+ // internal
+ // if this is not divisible by 8, we're wasting space
+-constexpr std::size_t TORRENT_READ_HANDLER_MAX_SIZE = 400;
++constexpr std::size_t TORRENT_READ_HANDLER_MAX_SIZE = 416;
+ # endif
+ #endif
+ 
+ #if !defined(TORRENT_WRITE_HANDLER_MAX_SIZE)
+ # if defined _GLIBCXX_DEBUG || !defined NDEBUG
+ // internal
+-constexpr std::size_t TORRENT_WRITE_HANDLER_MAX_SIZE = 432;
++constexpr std::size_t TORRENT_WRITE_HANDLER_MAX_SIZE = 448;
+ # else
+ // internal
+ // if this is not divisible by 8, we're wasting space
+-constexpr std::size_t TORRENT_WRITE_HANDLER_MAX_SIZE = 400;
++constexpr std::size_t TORRENT_WRITE_HANDLER_MAX_SIZE = 416;
+ # endif
+ #endif
+ 
